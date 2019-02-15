@@ -1,5 +1,4 @@
 import random
-import sys
 
 
 def size():
@@ -28,8 +27,6 @@ def main():
     cont = input("Would you like to roll again? Y/N")
     if cont.lower() == "y":
         main()
-    elif cont.lower() == "n":
-        sys.exit()
 
 
 main()
