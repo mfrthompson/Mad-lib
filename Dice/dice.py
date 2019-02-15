@@ -16,7 +16,13 @@ def amount():
         return roll_amt
     except ValueError:
         print("Numbers only please")
-        amount()
+        amount()    
+    
+    
+def again():
+    cont = input("Would you like to roll again? Y/N")
+    if cont.lower() == "y":
+        main()
 
 
 def main():
@@ -24,10 +30,7 @@ def main():
     roll_amt = amount()
     for _ in range(roll_amt):
         print(random.randint(1, side_dice))
-    cont = input("Would you like to roll again? Y/N")
-    if cont.lower() == "y":
-        main()
+    again()
 
 
 main()
-
